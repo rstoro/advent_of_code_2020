@@ -17,6 +17,6 @@ if __name__ == '__main__':
     #part 2
     mult = lambda a, b: a * b
     slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
-    print(reduce(mult, ( sum(collisions(hill, slope[0], slope[1])) for slope in slopes)) )
+    print(reduce(mult, ( sum(collisions(hill, slope[0], slope[1])) for slope in slopes )))
 
 
