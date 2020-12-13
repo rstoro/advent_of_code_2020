@@ -19,10 +19,13 @@ if __name__ == '__main__':
     # part 2
     offset_ids = [ (i, b_ids[i]) for i in range(len(b_ids)) if b_ids[i] != 0 ]
     t, jmp, match_i = 1, 1, 0
-    while not all((t+offset) % val == 0 for (offset, val) in offset_ids) and (t := t+jmp):
+    while t := t+jmp:
         if all( (t+offset) % val == 0 for (offset, val) in offset_ids[:match_i+1] ):
             jmp *= offset_ids[match_i][1]
             match_i += 1
+
+        if match_i == len(offset_ids):
+            break
 
     print(t)
 
