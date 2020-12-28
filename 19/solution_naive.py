@@ -41,5 +41,4 @@ if __name__ == '__main__':
     
     # part 1
     rule_zero = parse_rule(rules[0], rules[:])[0]
-    print(rule_zero)
     print(sum(message in rule_zero for message in messages))
